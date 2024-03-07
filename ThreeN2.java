@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * ThreeN2
  * A program that computes and displays several 3N+1 sequences. Starting
@@ -8,8 +10,29 @@
  */
 public class ThreeN2 {
     public static void main(String[] args) {
+        int K; // Starting point for sequence, specified by the user.
+
+        Scanner stdin = new Scanner(System.in); // Open stdin from keyboard
+
         System.out.println("This program will print out 3N+1 sequences");
         System.out.println("for starting values that you specify.");
         System.out.println();
+
+        do {
+            System.out.println("Enter a starting value;");
+            System.out.print("To end the program, enter 0: ");
+            K = stdin.nextInt();
+            if (K > 0) {
+                print3NSequence(K);
+            }
+
+        } while (K > 0); // continue only if K > 0
+        System.out.println("Done!");
+
+        stdin.close();
+    }
+
+    private static void print3NSequence(int k) {
+        System.out.println("print3NSequence for " + k + "...");
     }
 }
