@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class ThreeN2 {
     public static void main(String[] args) {
-        int K; // Starting point for sequence, specified by the user.
+        int initK; // Starting point for sequence, specified by the user.
 
         Scanner stdin = new Scanner(System.in); // Open stdin from keyboard
 
@@ -21,12 +21,12 @@ public class ThreeN2 {
         do {
             System.out.println("Enter a starting value;");
             System.out.print("To end the program, enter 0: ");
-            K = stdin.nextInt();
-            if (K > 0) {
-                print3NSequence(K);
+            initK = stdin.nextInt();
+            if (initK > 0) {
+                print3NSequence(initK);
             }
 
-        } while (K > 0); // continue only if K > 0
+        } while (initK > 0); // continue only if K > 0
         System.out.println("Done!");
 
         stdin.close();
